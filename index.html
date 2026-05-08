@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SeoulPick 韓國代購管理系統</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="系統導覽">
+        <a class="brand" href="#/seller/groups">
+          <span class="brand-mark">SP</span>
+          <span><strong>SeoulPick</strong><small>Buying ops system</small></span>
+        </a>
+
+        <div class="nav-section">
+          <span class="nav-label">賣家後台</span>
+          <nav class="nav-list">
+            <a class="nav-item" href="#/seller/groups" data-route="seller/groups">團務流程</a>
+            <a class="nav-item" href="#/seller/forms" data-route="seller/forms">表單設計</a>
+            <a class="nav-item" href="#/seller/orders" data-route="seller/orders">訂單作業</a>
+            <a class="nav-item" href="#/seller/reports" data-route="seller/reports">報表中心</a>
+            <a class="nav-item" href="#/seller/feedback" data-route="seller/feedback">意見回饋</a>
+            <a class="nav-item" href="#/seller/rules" data-route="seller/rules">規則版本</a>
+          </nav>
+        </div>
+
+        <div class="nav-section">
+          <span class="nav-label">買家前台</span>
+          <nav class="nav-list">
+            <a class="nav-item" href="#/customer/profile" data-route="customer/profile">個人資料</a>
+            <a class="nav-item" href="#/customer/rules" data-route="customer/rules">遵守規則</a>
+            <a class="nav-item" href="#/customer/browse" data-route="customer/browse">開放團務</a>
+            <a class="nav-item" href="#/customer/orders" data-route="customer/orders">我的訂單</a>
+            <a class="nav-item" href="#/customer/feedback" data-route="customer/feedback">意見回饋</a>
+          </nav>
+        </div>
+
+        <div class="sidebar-panel">
+          <span class="field-caption">買家預覽身份</span>
+          <select id="customerSelect"></select>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="route-view" id="sellerGroupsView">
+          <header class="page-header">
+            <div>
+              <p class="eyebrow">Workflow</p>
+              <h1>團務流程</h1>
+              <p>新增團務時可套用模板，也可從空白表單開始；模板只複製內容，不影響原模板。</p>
+            </div>
+            <button class="primary-action" id="createGroupBtn" type="button">以模板新增團務</button>
+          </header>
+          <div class="metric-grid" id="sellerMetricGrid"></div>
+          <section class="panel">
+            <div class="panel-heading"><div><p class="eyebrow">Templates</p><h2>預設模板</h2></div></div>
+            <div class="template-grid" id="templateGrid"></div>
+          </section>
+          <div class="split-grid">
+            <section class="panel">
+              <div class="panel-heading"><div><p class="eyebrow">Groups</p><h2>團務清單</h2></div><span id="groupCount"></span></div>
+              <div class="group-list" id="groupList"></div>
+            </section>
+            <section class="panel">
+              <div class="panel-heading"><div><p class="eyebrow">Progress</p><h2>賣家作業進度</h2></div><span id="selectedGroupLabel"></span></div>
+              <div class="status-board" id="workflowBoard"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="route-view" id="sellerFormsView">
+          <header class="page-header compact">
+            <div>
+              <p class="eyebrow">Form designer</p>
+              <h1>表單設計</h1>
+              <p>以版型區塊組裝表單，支援類似 Google 表單的即時預覽與方格題型。</p>
+            </div>
+            <button class="primary-action" id="addBlockBtn" type="button">新增版型區塊</button>
+          </header>
+          <div class="split-grid">
+            <section class="panel">
+              <div class="panel-heading"><div><p class="eyebrow">Blocks</p><h2>版型區塊</h2></div></div>
+              <div class="form-builder" id="formBlockList"></div>
+            </section>
+            <section class="panel">
+              <div class="panel-heading"><div><p class="eyebrow">Preview</p><h2>即時預覽</h2></div></div>
+              <form class="preview-form" id="formPreview"></form>
+            </section>
+          </div>
+        </section>
+
+        <section class="route-view" id="sellerOrdersView">
+          <header class="page-header compact">
+            <div>
+              <p class="eyebrow">Order ops</p>
+              <h1>訂單作業</h1>
+              <p>購買、報關抵台、出貨、付款與取貨都由賣家切換，買家端同步看到狀態。</p>
+            </div>
+            <button class="ghost-action" id="bulkNotifyBtn" type="button">產生通知摘要</button>
+          </header>
+          <div class="toolbar">
+            <select id="orderGroupFilter"></select>
+            <select id="orderStatusFilter">
+              <option value="all">全部狀態</option>
+              <option value="pending">待處理</option>
+              <option value="purchased">已購買</option>
+              <option value="arrived_tw">報關抵台</option>
+              <option value="shipped">已出貨</option>
+              <option value="paid">已付款</option>
+              <option value="unpaid">未付款</option>
+            </select>
+          </div>
+          <section class="panel">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>訂單</th><th>買家</th><th>團務</th><th>商品</th><th>付款</th><th>購買</th><th>報關</th><th>出貨</th><th>取貨</th><th>金額</th>
+                  </tr>
+                </thead>
+                <tbody id="sellerOrderRows"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="route-view" id="sellerReportsView">
+          <header class="page-header compact">
+            <div>
+              <p class="eyebrow">Reports</p>
+              <h1>報表中心</h1>
+              <p>對帳單、團務訂單、月年損益與顧客消費查詢，並可匯出 Excel 多頁籤檔。</p>
+            </div>
+            <button class="primary-action" id="exportExcelBtn" type="button">匯出 Excel</button>
+          </header>
+          <div class="report-tabs">
+            <button class="tab-button active" data-report="statement" type="button">對帳單現況</button>
+            <button class="tab-button" data-report="group" type="button">團務訂單</button>
+            <button class="tab-button" data-report="profit" type="button">月年統計</button>
+            <button class="tab-button" data-report="customer" type="button">顧客消費</button>
+          </div>
+          <section class="panel">
+            <div class="toolbar">
+              <input id="reportSearch" type="search" placeholder="搜尋買家、訂單、商品" />
+              <select id="reportGroupFilter"></select>
+              <select id="reportCustomerFilter"></select>
+              <select id="reportPeriodFilter">
+                <option value="month">本月</option>
+                <option value="quarter">近三個月</option>
+                <option value="year">今年</option>
+                <option value="all">全部</option>
+              </select>
+            </div>
+            <div id="reportContent"></div>
+          </section>
+        </section>
+
+        <section class="route-view" id="sellerFeedbackView">
+          <header class="page-header compact">
+            <div><p class="eyebrow">Feedback</p><h1>意見回饋</h1><p>集中處理買家留言、訂單問題與功能建議。</p></div>
+          </header>
+          <div class="feedback-list" id="sellerFeedbackList"></div>
+        </section>
+
+        <section class="route-view" id="sellerRulesView">
+          <header class="page-header compact">
+            <div><p class="eyebrow">Rules</p><h1>規則版本</h1><p>管理代購條款、發布版本與買家閱讀同意紀錄。</p></div>
+            <button class="primary-action" id="publishRuleBtn" type="button">發布新版規則</button>
+          </header>
+          <div class="split-grid">
+            <section class="panel"><div class="panel-heading"><div><p class="eyebrow">Versions</p><h2>版本紀錄</h2></div></div><div id="ruleVersionList"></div></section>
+            <section class="panel"><div class="panel-heading"><div><p class="eyebrow">Acceptance</p><h2>買家同意狀態</h2></div></div><div id="ruleAcceptanceList"></div></section>
+          </div>
+        </section>
+
+        <section class="route-view" id="customerProfileView">
+          <header class="page-header compact">
+            <div><p class="eyebrow">Profile</p><h1>個人基本資料</h1><p>本名、暱稱、偶像本命、Google 信箱與社群名稱會用於登記與查詢。</p></div>
+          </header>
+          <section class="panel"><form class="profile-form" id="profileForm"></form></section>
+        </section>
+
+        <section class="route-view" id="customerRulesView">
+          <header class="page-header compact">
+            <div><p class="eyebrow">Agreement</p><h1>代購登記規則</h1><p>規則更新後需重新閱讀並同意，才可繼續登記團務。</p></div>
+          </header>
+          <section class="panel" id="customerRulePanel"></section>
+        </section>
+
+        <section class="route-view" id="customerBrowseView">
+          <header class="page-header compact">
+            <div><p class="eyebrow">Open groups</p><h1>開放團務</h1><p>尚未同意最新版規則時，登記按鈕會引導到規則頁。</p></div>
+          </header>
+          <div class="customer-group-grid" id="customerGroupGrid"></div>
+        </section>
+
+        <section class="route-view" id="customerOrdersView">
+          <header class="page-header compact">
+            <div><p class="eyebrow">My orders</p><h1>我的訂單</h1><p>查看自己的付款、購買、報關、出貨與取貨狀態。</p></div>
+          </header>
+          <div class="order-grid" id="customerOrders"></div>
+        </section>
+
+        <section class="route-view" id="customerFeedbackView">
+          <header class="page-header compact">
+            <div><p class="eyebrow">Feedback</p><h1>意見回饋</h1><p>與賣家溝通訂單問題、付款疑問或功能建議。</p></div>
+          </header>
+          <div class="split-grid">
+            <section class="panel"><form class="preview-form" id="feedbackForm"></form></section>
+            <section class="panel"><div class="feedback-list" id="customerFeedbackList"></div></section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

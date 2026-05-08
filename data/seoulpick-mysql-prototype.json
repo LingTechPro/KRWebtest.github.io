@@ -1,0 +1,451 @@
+{
+  "users": [
+    {
+      "id": "u-admin",
+      "name": "團主 Mina",
+      "email": "admin@seoulpick.test",
+      "phone": "0912000111",
+      "role": "admin"
+    },
+    {
+      "id": "u-helper",
+      "name": "小幫手 Hana",
+      "email": "helper@seoulpick.test",
+      "phone": "0922333444",
+      "role": "helper"
+    },
+    {
+      "id": "u-mei",
+      "name": "林小美",
+      "email": "mei@example.com",
+      "phone": "0912345345",
+      "role": "customer"
+    },
+    {
+      "id": "u-nana",
+      "name": "陳娜娜",
+      "email": "nana@example.com",
+      "phone": "0988766123",
+      "role": "customer"
+    },
+    {
+      "id": "u-kai",
+      "name": "王凱",
+      "email": "kai@example.com",
+      "phone": "0933555789",
+      "role": "customer"
+    }
+  ],
+  "groups": [
+    {
+      "id": "group-1778202811561",
+      "title": "新韓國代購團 4",
+      "buyer": "韓國現場採購",
+      "category": "新品測試",
+      "publishDate": "2026-05-08T00:54:06.276Z",
+      "deadline": "2026-05-11T00:54:06.276Z",
+      "status": "active",
+      "createdBy": "u-admin",
+      "workflow": {
+        "ordered": 0,
+        "arrived": 0,
+        "completed": 0
+      }
+    },
+    {
+      "id": "olive-young-may",
+      "title": "5 月 Olive Young 美妝團",
+      "buyer": "首爾江南店",
+      "category": "美妝保養",
+      "publishDate": "2026-05-06T12:54:06.276Z",
+      "deadline": "2026-05-08T20:54:06.276Z",
+      "status": "active",
+      "createdBy": "u-admin",
+      "workflow": {
+        "ordered": 82,
+        "arrived": 20,
+        "completed": 8
+      }
+    },
+    {
+      "id": "seongsu-fashion",
+      "title": "聖水洞服飾連線",
+      "buyer": "Seongsu select shops",
+      "category": "服飾配件",
+      "publishDate": "2026-05-07T12:54:06.276Z",
+      "deadline": "2026-05-11T00:54:06.276Z",
+      "status": "active",
+      "createdBy": "u-admin",
+      "workflow": {
+        "ordered": 36,
+        "arrived": 0,
+        "completed": 0
+      }
+    },
+    {
+      "id": "lotte-snack",
+      "title": "樂天超市零食團",
+      "buyer": "Lotte Mart Seoul Station",
+      "category": "食品零食",
+      "publishDate": "2026-05-04T06:54:06.276Z",
+      "deadline": "2026-05-07T22:54:06.276Z",
+      "status": "closed",
+      "createdBy": "u-admin",
+      "workflow": {
+        "ordered": 100,
+        "arrived": 74,
+        "completed": 42
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "product-1778202627746",
+      "groupId": "olive-young-may",
+      "brand": "Sample Seoul",
+      "name": "測試商品 10",
+      "spec": "規格可編輯",
+      "costKrw": 12000,
+      "priceTwd": 450,
+      "stock": 10,
+      "limitQty": 2
+    },
+    {
+      "id": "product-1778201774021",
+      "groupId": "olive-young-may",
+      "brand": "Sample Seoul",
+      "name": "測試商品 9",
+      "spec": "規格可編輯",
+      "costKrw": 12000,
+      "priceTwd": 450,
+      "stock": 10,
+      "limitQty": 2
+    },
+    {
+      "id": "product-1778201772208",
+      "groupId": "olive-young-may",
+      "brand": "Sample Seoul",
+      "name": "測試商品 8",
+      "spec": "規格可編輯",
+      "costKrw": 12000,
+      "priceTwd": 450,
+      "stock": 10,
+      "limitQty": 2
+    },
+    {
+      "id": "torriden-serum",
+      "groupId": "olive-young-may",
+      "brand": "Torriden",
+      "name": "低分子玻尿酸精華",
+      "spec": "50ml",
+      "costKrw": 15800,
+      "priceTwd": 520,
+      "stock": 18,
+      "limitQty": 2
+    },
+    {
+      "id": "round-lab-sun",
+      "groupId": "olive-young-may",
+      "brand": "Round Lab",
+      "name": "白樺水感防曬",
+      "spec": "50ml",
+      "costKrw": 13900,
+      "priceTwd": 430,
+      "stock": 24,
+      "limitQty": 3
+    },
+    {
+      "id": "romand-tint",
+      "groupId": "olive-young-may",
+      "brand": "Rom&nd",
+      "name": "果汁唇釉",
+      "spec": "色號可選",
+      "costKrw": 8900,
+      "priceTwd": 280,
+      "stock": 40,
+      "limitQty": 5
+    },
+    {
+      "id": "linen-shirt",
+      "groupId": "seongsu-fashion",
+      "brand": "Atempo",
+      "name": "韓製亞麻襯衫",
+      "spec": "S / M / L",
+      "costKrw": 36500,
+      "priceTwd": 1180,
+      "stock": 8,
+      "limitQty": 1
+    },
+    {
+      "id": "wide-denim",
+      "groupId": "seongsu-fashion",
+      "brand": "Mardi",
+      "name": "高腰寬版牛仔褲",
+      "spec": "S / M",
+      "costKrw": 44800,
+      "priceTwd": 1450,
+      "stock": 6,
+      "limitQty": 1
+    },
+    {
+      "id": "mini-bag",
+      "groupId": "seongsu-fashion",
+      "brand": "Stand Oil",
+      "name": "皮革迷你肩背包",
+      "spec": "黑 / 奶茶 / 銀",
+      "costKrw": 52000,
+      "priceTwd": 1680,
+      "stock": 5,
+      "limitQty": 1
+    },
+    {
+      "id": "almond-pack",
+      "groupId": "lotte-snack",
+      "brand": "Tom's Farm",
+      "name": "杏仁包",
+      "spec": "210g",
+      "costKrw": 9900,
+      "priceTwd": 390,
+      "stock": 30,
+      "limitQty": 4
+    }
+  ],
+  "formFields": [
+    {
+      "id": "f-name",
+      "groupId": "olive-young-may",
+      "type": "text",
+      "label": "顧客姓名",
+      "required": true,
+      "order": 1,
+      "options": [],
+      "rows": [],
+      "columns": []
+    },
+    {
+      "id": "f-phone",
+      "groupId": "olive-young-may",
+      "type": "text",
+      "label": "手機號碼",
+      "required": true,
+      "order": 2,
+      "options": [],
+      "rows": [],
+      "columns": []
+    },
+    {
+      "id": "f-product",
+      "groupId": "olive-young-may",
+      "type": "radio_grid",
+      "label": "商品與代購成員",
+      "required": true,
+      "order": 3,
+      "options": [],
+      "rows": [
+        "Torriden 精華",
+        "Round Lab 防曬",
+        "Rom&nd 唇釉"
+      ],
+      "columns": [
+        "Mina",
+        "Hana"
+      ]
+    },
+    {
+      "id": "f-qty",
+      "groupId": "olive-young-may",
+      "type": "checkbox_grid",
+      "label": "商品數量",
+      "required": true,
+      "order": 4,
+      "options": [],
+      "rows": [
+        "Torriden 精華",
+        "Round Lab 防曬",
+        "Rom&nd 唇釉"
+      ],
+      "columns": [
+        "1",
+        "2",
+        "3",
+        "4+"
+      ]
+    },
+    {
+      "id": "f-substitute",
+      "groupId": "olive-young-may",
+      "type": "radio",
+      "label": "可接受替代品",
+      "required": true,
+      "order": 5,
+      "options": [
+        "可替代",
+        "需先確認",
+        "不接受替代"
+      ],
+      "rows": [],
+      "columns": []
+    },
+    {
+      "id": "f-note",
+      "groupId": "olive-young-may",
+      "type": "textarea",
+      "label": "備註",
+      "required": false,
+      "order": 6,
+      "options": [],
+      "rows": [],
+      "columns": []
+    },
+    {
+      "id": "field-1778202768682",
+      "groupId": "olive-young-may",
+      "type": "radio_grid",
+      "label": "新方格欄位 7",
+      "required": true,
+      "order": 7,
+      "options": [],
+      "rows": [
+        "商品 A",
+        "商品 B"
+      ],
+      "columns": [
+        "1",
+        "2",
+        "3"
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "SO-682700",
+      "groupId": "olive-young-may",
+      "userId": "u-mei",
+      "productId": "round-lab-sun",
+      "quantity": 1,
+      "totalAmount": 430,
+      "status": "ordered",
+      "paymentStatus": "unpaid",
+      "note": "API ???",
+      "createdAt": "2026-05-08T00:54:42.700Z",
+      "updatedAt": "2026-05-08T01:11:19.407Z"
+    },
+    {
+      "id": "SO-1001",
+      "groupId": "olive-young-may",
+      "userId": "u-mei",
+      "productId": "torriden-serum",
+      "quantity": 2,
+      "totalAmount": 1040,
+      "status": "ordered",
+      "paymentStatus": "unpaid",
+      "note": "若有套組可替代",
+      "createdAt": "2026-05-08T00:54:08.334Z",
+      "updatedAt": "2026-05-08T00:54:08.334Z"
+    },
+    {
+      "id": "SO-1002",
+      "groupId": "olive-young-may",
+      "userId": "u-nana",
+      "productId": "romand-tint",
+      "quantity": 4,
+      "totalAmount": 1120,
+      "status": "arrived",
+      "paymentStatus": "paid",
+      "note": "色號 23、25 各兩支",
+      "createdAt": "2026-05-08T00:54:08.334Z",
+      "updatedAt": "2026-05-08T00:54:08.334Z"
+    },
+    {
+      "id": "SO-1003",
+      "groupId": "seongsu-fashion",
+      "userId": "u-kai",
+      "productId": "mini-bag",
+      "quantity": 1,
+      "totalAmount": 1680,
+      "status": "ordered",
+      "paymentStatus": "unpaid",
+      "note": "黑色優先",
+      "createdAt": "2026-05-08T00:54:08.334Z",
+      "updatedAt": "2026-05-08T00:54:08.334Z"
+    },
+    {
+      "id": "SO-1004",
+      "groupId": "lotte-snack",
+      "userId": "u-mei",
+      "productId": "almond-pack",
+      "quantity": 3,
+      "totalAmount": 1170,
+      "status": "completed",
+      "paymentStatus": "paid",
+      "note": "原味",
+      "createdAt": "2026-05-08T00:54:08.334Z",
+      "updatedAt": "2026-05-08T00:54:08.334Z"
+    }
+  ],
+  "orderAnswers": [
+    {
+      "id": "a-1001-1",
+      "orderId": "SO-1001",
+      "fieldId": "f-substitute",
+      "value": "可替代"
+    },
+    {
+      "id": "a-1001-2",
+      "orderId": "SO-1001",
+      "fieldId": "f-qty",
+      "value": {
+        "Torriden 精華": [
+          "2"
+        ]
+      }
+    }
+  ],
+  "payments": [
+    {
+      "id": "p-1778201682700",
+      "orderId": "SO-682700",
+      "userId": "u-mei",
+      "amount": 430,
+      "method": "bank_transfer",
+      "paymentDate": null,
+      "status": "unpaid"
+    },
+    {
+      "id": "p-1001",
+      "orderId": "SO-1001",
+      "userId": "u-mei",
+      "amount": 1040,
+      "method": "bank_transfer",
+      "paymentDate": null,
+      "status": "unpaid"
+    },
+    {
+      "id": "p-1002",
+      "orderId": "SO-1002",
+      "userId": "u-nana",
+      "amount": 1120,
+      "method": "line_pay",
+      "paymentDate": "2026-05-08T00:54:08.334Z",
+      "status": "paid"
+    },
+    {
+      "id": "p-1003",
+      "orderId": "SO-1003",
+      "userId": "u-kai",
+      "amount": 1680,
+      "method": "bank_transfer",
+      "paymentDate": null,
+      "status": "unpaid"
+    },
+    {
+      "id": "p-1004",
+      "orderId": "SO-1004",
+      "userId": "u-mei",
+      "amount": 1170,
+      "method": "cash",
+      "paymentDate": "2026-05-08T00:54:08.334Z",
+      "status": "paid"
+    }
+  ]
+}

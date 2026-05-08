@@ -1,0 +1,437 @@
+{
+  "groups": [
+    {
+      "id": "olive-young-may",
+      "name": "5 月 Olive Young 美妝團",
+      "buyer": "首爾江南店",
+      "category": "美妝保養",
+      "opensAt": "2026-05-06T03:32:09.288Z",
+      "closesAt": "2026-05-08T05:32:09.288Z",
+      "workflow": {
+        "order": 82,
+        "payment": 64,
+        "customs": 20,
+        "shipping": 8
+      },
+      "dates": [
+        [
+          "開放登記",
+          "2026-05-06T03:32:09.288Z",
+          "完成"
+        ],
+        [
+          "關單",
+          "2026-05-08T05:32:09.288Z",
+          "進行中"
+        ],
+        [
+          "韓國下單",
+          "2026-05-08T13:32:09.288Z",
+          "待處理"
+        ],
+        [
+          "報關",
+          "2026-05-11T09:32:09.288Z",
+          "待處理"
+        ],
+        [
+          "台灣出貨",
+          "2026-05-12T21:32:09.288Z",
+          "待處理"
+        ]
+      ]
+    },
+    {
+      "id": "seongsu-fashion",
+      "name": "聖水洞服飾連線",
+      "buyer": "Seongsu select shops",
+      "category": "服飾配件",
+      "opensAt": "2026-05-06T21:32:09.288Z",
+      "closesAt": "2026-05-10T09:32:09.288Z",
+      "workflow": {
+        "order": 36,
+        "payment": 24,
+        "customs": 0,
+        "shipping": 0
+      },
+      "dates": [
+        [
+          "開放登記",
+          "2026-05-06T21:32:09.288Z",
+          "完成"
+        ],
+        [
+          "關單",
+          "2026-05-10T09:32:09.288Z",
+          "進行中"
+        ],
+        [
+          "韓國下單",
+          "2026-05-10T21:32:09.288Z",
+          "待處理"
+        ],
+        [
+          "報關",
+          "2026-05-13T15:32:09.288Z",
+          "待處理"
+        ],
+        [
+          "台灣出貨",
+          "2026-05-15T07:32:09.288Z",
+          "待處理"
+        ]
+      ]
+    },
+    {
+      "id": "lotte-snack",
+      "name": "樂天超市零食團",
+      "buyer": "Lotte Mart Seoul Station",
+      "category": "食品零食",
+      "opensAt": "2026-05-03T15:32:09.288Z",
+      "closesAt": "2026-05-07T07:32:09.288Z",
+      "workflow": {
+        "order": 100,
+        "payment": 100,
+        "customs": 74,
+        "shipping": 42
+      },
+      "dates": [
+        [
+          "開放登記",
+          "2026-05-03T15:32:09.288Z",
+          "完成"
+        ],
+        [
+          "關單",
+          "2026-05-07T07:32:09.288Z",
+          "完成"
+        ],
+        [
+          "韓國下單",
+          "2026-05-07T13:32:09.288Z",
+          "完成"
+        ],
+        [
+          "報關",
+          "2026-05-08T21:32:09.288Z",
+          "進行中"
+        ],
+        [
+          "台灣出貨",
+          "2026-05-10T07:32:09.288Z",
+          "待處理"
+        ]
+      ]
+    },
+    {
+      "id": "group-1778146855767",
+      "name": "韓國連線團 4",
+      "buyer": "韓國現場採購",
+      "category": "新品測試",
+      "opensAt": "2026-05-07T08:34:18.561Z",
+      "closesAt": "2026-05-10T09:34:18.561Z",
+      "workflow": {
+        "order": 0,
+        "payment": 0,
+        "customs": 0,
+        "shipping": 0
+      },
+      "dates": [
+        [
+          "開放登記",
+          "2026-05-07T08:34:18.561Z",
+          "進行中"
+        ],
+        [
+          "關單",
+          "2026-05-10T09:34:18.561Z",
+          "待處理"
+        ],
+        [
+          "韓國下單",
+          "2026-05-10T21:34:18.561Z",
+          "待處理"
+        ],
+        [
+          "報關",
+          "2026-05-12T21:34:18.561Z",
+          "待處理"
+        ],
+        [
+          "台灣出貨",
+          "2026-05-14T11:34:18.561Z",
+          "待處理"
+        ]
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "torriden-serum",
+      "groupId": "olive-young-may",
+      "brand": "Torriden",
+      "name": "低分子玻尿酸精華",
+      "spec": "50ml",
+      "costKrw": 15800,
+      "priceTwd": 520,
+      "stock": 18,
+      "limit": 2
+    },
+    {
+      "id": "round-lab-sun",
+      "groupId": "olive-young-may",
+      "brand": "Round Lab",
+      "name": "白樺水感防曬",
+      "spec": "50ml",
+      "costKrw": 13900,
+      "priceTwd": 430,
+      "stock": 24,
+      "limit": 3
+    },
+    {
+      "id": "romand-tint",
+      "groupId": "olive-young-may",
+      "brand": "Rom&nd",
+      "name": "果汁唇釉",
+      "spec": "色號可選",
+      "costKrw": 8900,
+      "priceTwd": 280,
+      "stock": 40,
+      "limit": 5
+    },
+    {
+      "id": "linen-shirt",
+      "groupId": "seongsu-fashion",
+      "brand": "Atempo",
+      "name": "韓製亞麻襯衫",
+      "spec": "S / M / L",
+      "costKrw": 36500,
+      "priceTwd": 1180,
+      "stock": 8,
+      "limit": 1
+    },
+    {
+      "id": "wide-denim",
+      "groupId": "seongsu-fashion",
+      "brand": "Mardi",
+      "name": "高腰寬版牛仔褲",
+      "spec": "S / M",
+      "costKrw": 44800,
+      "priceTwd": 1450,
+      "stock": 6,
+      "limit": 1
+    },
+    {
+      "id": "mini-bag",
+      "groupId": "seongsu-fashion",
+      "brand": "Stand Oil",
+      "name": "皮革迷你肩背包",
+      "spec": "黑 / 奶茶 / 銀",
+      "costKrw": 52000,
+      "priceTwd": 1680,
+      "stock": 5,
+      "limit": 1
+    },
+    {
+      "id": "honey-butter",
+      "groupId": "lotte-snack",
+      "brand": "Haitai",
+      "name": "蜂蜜奶油洋芋片",
+      "spec": "60g",
+      "costKrw": 1800,
+      "priceTwd": 110,
+      "stock": 50,
+      "limit": 8
+    },
+    {
+      "id": "almond-pack",
+      "groupId": "lotte-snack",
+      "brand": "Tom's Farm",
+      "name": "杏仁包",
+      "spec": "210g",
+      "costKrw": 9900,
+      "priceTwd": 390,
+      "stock": 30,
+      "limit": 4
+    },
+    {
+      "id": "market-o",
+      "groupId": "lotte-snack",
+      "brand": "Market O",
+      "name": "布朗尼",
+      "spec": "12 入",
+      "costKrw": 4500,
+      "priceTwd": 180,
+      "stock": 30,
+      "limit": 5
+    },
+    {
+      "id": "product-1778146816007",
+      "groupId": "olive-young-may",
+      "brand": "Sample Seoul",
+      "name": "測試商品 10",
+      "spec": "規格可編輯",
+      "costKrw": 12000,
+      "priceTwd": 450,
+      "stock": 12,
+      "limit": 2
+    }
+  ],
+  "orders": [
+    {
+      "id": "SO-848726",
+      "groupId": "olive-young-may",
+      "productId": "torriden-serum",
+      "customerName": "陳娜娜",
+      "email": "nana@example.com",
+      "lineId": "line_demo",
+      "quantity": 1,
+      "payment": "待收款",
+      "shipping": "待下單",
+      "note": "顧客前台模擬登記",
+      "createdAt": "2026-05-07T09:40:48.726Z"
+    },
+    {
+      "id": "SO-1001",
+      "groupId": "olive-young-may",
+      "productId": "torriden-serum",
+      "customerName": "林小美",
+      "email": "mei@example.com",
+      "lineId": "mei_88",
+      "quantity": 2,
+      "payment": "???",
+      "shipping": "待下單",
+      "note": "若有套組可替代",
+      "createdAt": "2026-05-07T09:32:11.226Z"
+    },
+    {
+      "id": "SO-1002",
+      "groupId": "olive-young-may",
+      "productId": "romand-tint",
+      "customerName": "陳娜娜",
+      "email": "nana@example.com",
+      "lineId": "nana.kr",
+      "quantity": 4,
+      "payment": "已付款",
+      "shipping": "報關中",
+      "note": "色號 23、25 各兩支",
+      "createdAt": "2026-05-07T09:32:11.226Z"
+    },
+    {
+      "id": "SO-1003",
+      "groupId": "seongsu-fashion",
+      "productId": "mini-bag",
+      "customerName": "王凱",
+      "email": "kai@example.com",
+      "lineId": "kai_line",
+      "quantity": 1,
+      "payment": "待收款",
+      "shipping": "待下單",
+      "note": "黑色優先",
+      "createdAt": "2026-05-07T09:32:11.226Z"
+    },
+    {
+      "id": "SO-1004",
+      "groupId": "lotte-snack",
+      "productId": "almond-pack",
+      "customerName": "林小美",
+      "email": "mei@example.com",
+      "lineId": "mei_88",
+      "quantity": 3,
+      "payment": "已付款",
+      "shipping": "已出貨",
+      "note": "原味",
+      "createdAt": "2026-05-07T09:32:11.226Z"
+    }
+  ],
+  "formQuestions": [
+    {
+      "id": 1,
+      "title": "顧客姓名",
+      "type": "簡答",
+      "preview": "短文字回答",
+      "tools": [
+        "必填",
+        "文字驗證"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Email",
+      "type": "簡答",
+      "preview": "email@example.com",
+      "tools": [
+        "必填",
+        "Email 驗證"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "LINE ID",
+      "type": "簡答",
+      "preview": "可選填",
+      "tools": [
+        "說明文字"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "商品規格",
+      "type": "下拉選單",
+      "preview": "請選擇色號 / 尺寸 / 款式",
+      "tools": [
+        "選項管理",
+        "庫存連動"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "購買證明上傳",
+      "type": "檔案上傳",
+      "preview": "支援圖片或 PDF",
+      "tools": [
+        "限制格式",
+        "限制大小"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "可接受替代品",
+      "type": "單選",
+      "preview": "可替代 / 需確認 / 不替代",
+      "tools": [
+        "跳題邏輯",
+        "必填"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "配送備註",
+      "type": "段落",
+      "preview": "長文字回答",
+      "tools": [
+        "說明文字"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "付款期限確認",
+      "type": "核取方塊",
+      "preview": "我了解逾期未付款會取消訂單",
+      "tools": [
+        "必填",
+        "條款確認"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "新表單欄位 9",
+      "type": "簡答",
+      "preview": "請輸入回答",
+      "tools": [
+        "必填",
+        "可編輯"
+      ]
+    }
+  ]
+}

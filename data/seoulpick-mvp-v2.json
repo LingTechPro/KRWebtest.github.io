@@ -1,0 +1,923 @@
+{
+  "version": 2,
+  "users": [
+    {
+      "id": "u-admin",
+      "name": "團主 Mina",
+      "nickname": "Mina",
+      "bias": "IVE Liz",
+      "email": "admin@seoulpick.test",
+      "googleEmailVerified": true,
+      "phone": "0912000111",
+      "phoneVerified": true,
+      "area": "台北市",
+      "fbName": "Mina SeoulPick",
+      "igName": "seoulpick.mina",
+      "account": "admin",
+      "role": "admin"
+    },
+    {
+      "id": "u-mei",
+      "name": "林小美",
+      "nickname": "小美",
+      "bias": "BTS Jungkook",
+      "email": "mei@example.com",
+      "googleEmailVerified": true,
+      "phone": "0912345345",
+      "phoneVerified": false,
+      "area": "新北市",
+      "fbName": "Mei Lin",
+      "igName": "",
+      "account": "mei",
+      "role": "customer"
+    },
+    {
+      "id": "u-nana",
+      "name": "陳娜娜",
+      "nickname": "Nana",
+      "bias": "NewJeans Hanni",
+      "email": "nana@example.com",
+      "googleEmailVerified": true,
+      "phone": "0988766123",
+      "phoneVerified": false,
+      "area": "台中市",
+      "fbName": "",
+      "igName": "nana.kr",
+      "account": "nana",
+      "role": "customer"
+    },
+    {
+      "id": "u-kai",
+      "name": "王凱",
+      "nickname": "Kai",
+      "bias": "SEVENTEEN Mingyu",
+      "email": "kai@example.com",
+      "googleEmailVerified": true,
+      "phone": "0933555789",
+      "phoneVerified": false,
+      "area": "高雄市",
+      "fbName": "Kai Wang",
+      "igName": "",
+      "account": "kai",
+      "role": "customer"
+    }
+  ],
+  "formTemplates": [
+    {
+      "id": "tpl-beauty",
+      "name": "美妝代購登記模板",
+      "description": "適合 Olive Young、彩妝、保養品。含色號、替代品與購買限制。",
+      "blocks": [
+        {
+          "id": "b-basic",
+          "title": "基本資料",
+          "layout": "identity",
+          "fields": [
+            {
+              "id": "name",
+              "type": "text",
+              "label": "本名",
+              "required": true,
+              "options": [],
+              "rows": [],
+              "columns": []
+            },
+            {
+              "id": "phone",
+              "type": "text",
+              "label": "手機號碼",
+              "required": true,
+              "options": [],
+              "rows": [],
+              "columns": []
+            },
+            {
+              "id": "line",
+              "type": "text",
+              "label": "LINE ID",
+              "required": false,
+              "options": [],
+              "rows": [],
+              "columns": []
+            }
+          ]
+        },
+        {
+          "id": "b-product",
+          "title": "商品選擇",
+          "layout": "product",
+          "fields": [
+            {
+              "id": "beauty-grid",
+              "type": "radio_grid",
+              "label": "商品 x 代購成員",
+              "required": true,
+              "options": [],
+              "rows": [
+                "Torriden 精華",
+                "Round Lab 防曬",
+                "Rom&nd 唇釉"
+              ],
+              "columns": [
+                "Mina",
+                "Hana"
+              ]
+            },
+            {
+              "id": "quantity-grid",
+              "type": "checkbox_grid",
+              "label": "商品 x 數量",
+              "required": true,
+              "options": [],
+              "rows": [
+                "Torriden 精華",
+                "Round Lab 防曬",
+                "Rom&nd 唇釉"
+              ],
+              "columns": [
+                "1",
+                "2",
+                "3",
+                "4+"
+              ]
+            },
+            {
+              "id": "substitute",
+              "type": "radio",
+              "label": "缺貨替代方案",
+              "required": true,
+              "options": [
+                "可替代",
+                "需先確認",
+                "不接受替代"
+              ],
+              "rows": [],
+              "columns": []
+            }
+          ]
+        },
+        {
+          "id": "b-note",
+          "title": "備註與同意",
+          "layout": "notice",
+          "fields": [
+            {
+              "id": "note",
+              "type": "textarea",
+              "label": "備註",
+              "required": false,
+              "options": [],
+              "rows": [],
+              "columns": []
+            },
+            {
+              "id": "agree",
+              "type": "checkbox",
+              "label": "我了解代購商品有缺貨與價格變動可能",
+              "required": true,
+              "options": [
+                "我已了解"
+              ],
+              "rows": [],
+              "columns": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tpl-fashion",
+      "name": "服飾尺寸登記模板",
+      "description": "適合衣服、包包、鞋款。含尺寸、顏色與可接受替代款。",
+      "blocks": [
+        {
+          "id": "f-basic",
+          "title": "基本資料",
+          "layout": "identity",
+          "fields": [
+            {
+              "id": "name",
+              "type": "text",
+              "label": "本名",
+              "required": true,
+              "options": [],
+              "rows": [],
+              "columns": []
+            },
+            {
+              "id": "phone",
+              "type": "text",
+              "label": "手機號碼",
+              "required": true,
+              "options": [],
+              "rows": [],
+              "columns": []
+            }
+          ]
+        },
+        {
+          "id": "f-size",
+          "title": "規格選擇",
+          "layout": "product",
+          "fields": [
+            {
+              "id": "size",
+              "type": "select",
+              "label": "尺寸",
+              "required": true,
+              "options": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL"
+              ],
+              "rows": [],
+              "columns": []
+            },
+            {
+              "id": "color",
+              "type": "radio",
+              "label": "顏色",
+              "required": true,
+              "options": [
+                "黑",
+                "白",
+                "奶茶",
+                "灰"
+              ],
+              "rows": [],
+              "columns": []
+            },
+            {
+              "id": "backup",
+              "type": "textarea",
+              "label": "替代款或備註",
+              "required": false,
+              "options": [],
+              "rows": [],
+              "columns": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "olive-young-may",
+      "title": "5 月 Olive Young 美妝團",
+      "category": "美妝保養",
+      "buyer": "首爾江南店",
+      "templateId": "tpl-beauty",
+      "publishDate": "2026-05-06T13:56:54.608Z",
+      "deadline": "2026-05-08T21:56:54.608Z",
+      "status": "active",
+      "createdBy": "u-admin",
+      "workflow": {
+        "ordered": 82,
+        "purchased": 60,
+        "customs": 20,
+        "shipped": 8,
+        "completed": 8
+      }
+    },
+    {
+      "id": "seongsu-fashion",
+      "title": "聖水洞服飾連線",
+      "category": "服飾配件",
+      "buyer": "Seongsu select shops",
+      "templateId": "tpl-fashion",
+      "publishDate": "2026-05-07T13:56:54.608Z",
+      "deadline": "2026-05-11T01:56:54.608Z",
+      "status": "active",
+      "createdBy": "u-admin",
+      "workflow": {
+        "ordered": 36,
+        "purchased": 24,
+        "customs": 0,
+        "shipped": 0,
+        "completed": 0
+      }
+    },
+    {
+      "id": "lotte-snack",
+      "title": "樂天超市零食團",
+      "category": "食品零食",
+      "buyer": "Lotte Mart Seoul Station",
+      "templateId": "tpl-beauty",
+      "publishDate": "2026-05-04T07:56:54.608Z",
+      "deadline": "2026-05-07T23:56:54.608Z",
+      "status": "closed",
+      "createdBy": "u-admin",
+      "workflow": {
+        "ordered": 100,
+        "purchased": 100,
+        "customs": 74,
+        "shipped": 42,
+        "completed": 42
+      }
+    }
+  ],
+  "formBlocks": [
+    {
+      "id": "olive-young-may-b-basic",
+      "title": "基本資料",
+      "layout": "identity",
+      "fields": [
+        {
+          "id": "olive-young-may-name",
+          "type": "text",
+          "label": "本名",
+          "required": true,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 1
+        },
+        {
+          "id": "olive-young-may-phone",
+          "type": "text",
+          "label": "手機號碼",
+          "required": true,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 2
+        },
+        {
+          "id": "olive-young-may-line",
+          "type": "text",
+          "label": "LINE ID",
+          "required": false,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 3
+        }
+      ],
+      "groupId": "olive-young-may",
+      "sourceTemplateId": "tpl-beauty",
+      "sortOrder": 1
+    },
+    {
+      "id": "olive-young-may-b-product",
+      "title": "商品選擇",
+      "layout": "product",
+      "fields": [
+        {
+          "id": "olive-young-may-beauty-grid",
+          "type": "radio_grid",
+          "label": "商品 x 代購成員",
+          "required": true,
+          "options": [],
+          "rows": [
+            "Torriden 精華",
+            "Round Lab 防曬",
+            "Rom&nd 唇釉"
+          ],
+          "columns": [
+            "Mina",
+            "Hana"
+          ],
+          "sortOrder": 1
+        },
+        {
+          "id": "olive-young-may-quantity-grid",
+          "type": "checkbox_grid",
+          "label": "商品 x 數量",
+          "required": true,
+          "options": [],
+          "rows": [
+            "Torriden 精華",
+            "Round Lab 防曬",
+            "Rom&nd 唇釉"
+          ],
+          "columns": [
+            "1",
+            "2",
+            "3",
+            "4+"
+          ],
+          "sortOrder": 2
+        },
+        {
+          "id": "olive-young-may-substitute",
+          "type": "radio",
+          "label": "缺貨替代方案",
+          "required": true,
+          "options": [
+            "可替代",
+            "需先確認",
+            "不接受替代"
+          ],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 3
+        }
+      ],
+      "groupId": "olive-young-may",
+      "sourceTemplateId": "tpl-beauty",
+      "sortOrder": 2
+    },
+    {
+      "id": "olive-young-may-b-note",
+      "title": "備註與同意",
+      "layout": "notice",
+      "fields": [
+        {
+          "id": "olive-young-may-note",
+          "type": "textarea",
+          "label": "備註",
+          "required": false,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 1
+        },
+        {
+          "id": "olive-young-may-agree",
+          "type": "checkbox",
+          "label": "我了解代購商品有缺貨與價格變動可能",
+          "required": true,
+          "options": [
+            "我已了解"
+          ],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 2
+        }
+      ],
+      "groupId": "olive-young-may",
+      "sourceTemplateId": "tpl-beauty",
+      "sortOrder": 3
+    },
+    {
+      "id": "seongsu-fashion-f-basic",
+      "title": "基本資料",
+      "layout": "identity",
+      "fields": [
+        {
+          "id": "seongsu-fashion-name",
+          "type": "text",
+          "label": "本名",
+          "required": true,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 1
+        },
+        {
+          "id": "seongsu-fashion-phone",
+          "type": "text",
+          "label": "手機號碼",
+          "required": true,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 2
+        }
+      ],
+      "groupId": "seongsu-fashion",
+      "sourceTemplateId": "tpl-fashion",
+      "sortOrder": 1
+    },
+    {
+      "id": "seongsu-fashion-f-size",
+      "title": "規格選擇",
+      "layout": "product",
+      "fields": [
+        {
+          "id": "seongsu-fashion-size",
+          "type": "select",
+          "label": "尺寸",
+          "required": true,
+          "options": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 1
+        },
+        {
+          "id": "seongsu-fashion-color",
+          "type": "radio",
+          "label": "顏色",
+          "required": true,
+          "options": [
+            "黑",
+            "白",
+            "奶茶",
+            "灰"
+          ],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 2
+        },
+        {
+          "id": "seongsu-fashion-backup",
+          "type": "textarea",
+          "label": "替代款或備註",
+          "required": false,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 3
+        }
+      ],
+      "groupId": "seongsu-fashion",
+      "sourceTemplateId": "tpl-fashion",
+      "sortOrder": 2
+    },
+    {
+      "id": "lotte-snack-b-basic",
+      "title": "基本資料",
+      "layout": "identity",
+      "fields": [
+        {
+          "id": "lotte-snack-name",
+          "type": "text",
+          "label": "本名",
+          "required": true,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 1
+        },
+        {
+          "id": "lotte-snack-phone",
+          "type": "text",
+          "label": "手機號碼",
+          "required": true,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 2
+        },
+        {
+          "id": "lotte-snack-line",
+          "type": "text",
+          "label": "LINE ID",
+          "required": false,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 3
+        }
+      ],
+      "groupId": "lotte-snack",
+      "sourceTemplateId": "tpl-beauty",
+      "sortOrder": 1
+    },
+    {
+      "id": "lotte-snack-b-product",
+      "title": "商品選擇",
+      "layout": "product",
+      "fields": [
+        {
+          "id": "lotte-snack-beauty-grid",
+          "type": "radio_grid",
+          "label": "商品 x 代購成員",
+          "required": true,
+          "options": [],
+          "rows": [
+            "Torriden 精華",
+            "Round Lab 防曬",
+            "Rom&nd 唇釉"
+          ],
+          "columns": [
+            "Mina",
+            "Hana"
+          ],
+          "sortOrder": 1
+        },
+        {
+          "id": "lotte-snack-quantity-grid",
+          "type": "checkbox_grid",
+          "label": "商品 x 數量",
+          "required": true,
+          "options": [],
+          "rows": [
+            "Torriden 精華",
+            "Round Lab 防曬",
+            "Rom&nd 唇釉"
+          ],
+          "columns": [
+            "1",
+            "2",
+            "3",
+            "4+"
+          ],
+          "sortOrder": 2
+        },
+        {
+          "id": "lotte-snack-substitute",
+          "type": "radio",
+          "label": "缺貨替代方案",
+          "required": true,
+          "options": [
+            "可替代",
+            "需先確認",
+            "不接受替代"
+          ],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 3
+        }
+      ],
+      "groupId": "lotte-snack",
+      "sourceTemplateId": "tpl-beauty",
+      "sortOrder": 2
+    },
+    {
+      "id": "lotte-snack-b-note",
+      "title": "備註與同意",
+      "layout": "notice",
+      "fields": [
+        {
+          "id": "lotte-snack-note",
+          "type": "textarea",
+          "label": "備註",
+          "required": false,
+          "options": [],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 1
+        },
+        {
+          "id": "lotte-snack-agree",
+          "type": "checkbox",
+          "label": "我了解代購商品有缺貨與價格變動可能",
+          "required": true,
+          "options": [
+            "我已了解"
+          ],
+          "rows": [],
+          "columns": [],
+          "sortOrder": 2
+        }
+      ],
+      "groupId": "lotte-snack",
+      "sourceTemplateId": "tpl-beauty",
+      "sortOrder": 3
+    }
+  ],
+  "products": [
+    {
+      "id": "torriden-serum",
+      "groupId": "olive-young-may",
+      "brand": "Torriden",
+      "name": "低分子玻尿酸精華",
+      "spec": "50ml",
+      "costKrw": 15800,
+      "priceTwd": 520,
+      "stock": 18,
+      "limitQty": 2,
+      "costTwd": 260
+    },
+    {
+      "id": "round-lab-sun",
+      "groupId": "olive-young-may",
+      "brand": "Round Lab",
+      "name": "白樺水感防曬",
+      "spec": "50ml",
+      "costKrw": 13900,
+      "priceTwd": 430,
+      "stock": 24,
+      "limitQty": 3,
+      "costTwd": 220
+    },
+    {
+      "id": "romand-tint",
+      "groupId": "olive-young-may",
+      "brand": "Rom&nd",
+      "name": "果汁唇釉",
+      "spec": "色號可選",
+      "costKrw": 8900,
+      "priceTwd": 280,
+      "stock": 40,
+      "limitQty": 5,
+      "costTwd": 145
+    },
+    {
+      "id": "linen-shirt",
+      "groupId": "seongsu-fashion",
+      "brand": "Atempo",
+      "name": "韓製亞麻襯衫",
+      "spec": "S / M / L",
+      "costKrw": 36500,
+      "priceTwd": 1180,
+      "stock": 8,
+      "limitQty": 1,
+      "costTwd": 760
+    },
+    {
+      "id": "mini-bag",
+      "groupId": "seongsu-fashion",
+      "brand": "Stand Oil",
+      "name": "皮革迷你肩背包",
+      "spec": "黑 / 奶茶 / 銀",
+      "costKrw": 52000,
+      "priceTwd": 1680,
+      "stock": 5,
+      "limitQty": 1,
+      "costTwd": 1100
+    },
+    {
+      "id": "almond-pack",
+      "groupId": "lotte-snack",
+      "brand": "Tom's Farm",
+      "name": "杏仁包",
+      "spec": "210g",
+      "costKrw": 9900,
+      "priceTwd": 390,
+      "stock": 30,
+      "limitQty": 4,
+      "costTwd": 250
+    }
+  ],
+  "orders": [
+    {
+      "id": "SO-1001",
+      "groupId": "olive-young-may",
+      "userId": "u-mei",
+      "productId": "torriden-serum",
+      "quantity": 2,
+      "status": "ordered",
+      "paymentStatus": "unpaid",
+      "purchaseStatus": "purchased",
+      "customsStatus": "pending",
+      "shippingStatus": "pending",
+      "note": "若有套組可替代",
+      "createdAt": "2026-05-07T05:56:54.608Z",
+      "updatedAt": "2026-05-07T05:56:54.608Z",
+      "totalAmount": 1040,
+      "costAmount": 520
+    },
+    {
+      "id": "SO-1002",
+      "groupId": "olive-young-may",
+      "userId": "u-nana",
+      "productId": "romand-tint",
+      "quantity": 4,
+      "status": "arrived",
+      "paymentStatus": "paid",
+      "purchaseStatus": "purchased",
+      "customsStatus": "arrived_tw",
+      "shippingStatus": "ready",
+      "note": "色號 23、25 各兩支",
+      "createdAt": "2026-05-07T09:56:54.608Z",
+      "updatedAt": "2026-05-07T09:56:54.608Z",
+      "totalAmount": 1120,
+      "costAmount": 580
+    },
+    {
+      "id": "SO-1003",
+      "groupId": "seongsu-fashion",
+      "userId": "u-kai",
+      "productId": "mini-bag",
+      "quantity": 1,
+      "status": "ordered",
+      "paymentStatus": "unpaid",
+      "purchaseStatus": "pending",
+      "customsStatus": "pending",
+      "shippingStatus": "pending",
+      "note": "黑色優先",
+      "createdAt": "2026-05-07T17:56:54.608Z",
+      "updatedAt": "2026-05-07T17:56:54.608Z",
+      "totalAmount": 1680,
+      "costAmount": 1100
+    },
+    {
+      "id": "SO-1004",
+      "groupId": "lotte-snack",
+      "userId": "u-mei",
+      "productId": "almond-pack",
+      "quantity": 3,
+      "status": "completed",
+      "paymentStatus": "paid",
+      "purchaseStatus": "purchased",
+      "customsStatus": "arrived_tw",
+      "shippingStatus": "shipped",
+      "note": "原味",
+      "createdAt": "2026-05-06T09:56:54.608Z",
+      "updatedAt": "2026-05-06T09:56:54.608Z",
+      "totalAmount": 1170,
+      "costAmount": 750
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay-SO-1001",
+      "orderId": "SO-1001",
+      "userId": "u-mei",
+      "amount": 1040,
+      "method": "bank_transfer",
+      "paymentDate": null,
+      "status": "unpaid"
+    },
+    {
+      "id": "pay-SO-1002",
+      "orderId": "SO-1002",
+      "userId": "u-nana",
+      "amount": 1120,
+      "method": "line_pay",
+      "paymentDate": "2026-05-07T15:56:54.608Z",
+      "status": "paid"
+    },
+    {
+      "id": "pay-SO-1003",
+      "orderId": "SO-1003",
+      "userId": "u-kai",
+      "amount": 1680,
+      "method": "bank_transfer",
+      "paymentDate": null,
+      "status": "unpaid"
+    },
+    {
+      "id": "pay-SO-1004",
+      "orderId": "SO-1004",
+      "userId": "u-mei",
+      "amount": 1170,
+      "method": "line_pay",
+      "paymentDate": "2026-05-07T15:56:54.608Z",
+      "status": "paid"
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": "fb-1",
+      "userId": "u-mei",
+      "scope": "customer",
+      "title": "希望新增常用地址",
+      "message": "每次填資料有點麻煩，希望可以儲存常用資訊。",
+      "status": "open",
+      "createdAt": "2026-05-07T13:56:54.608Z",
+      "replies": [
+        {
+          "by": "u-admin",
+          "message": "已放進買家基本資料規劃。",
+          "createdAt": "2026-05-07T15:56:54.608Z"
+        }
+      ]
+    },
+    {
+      "id": "fb-2",
+      "userId": "u-nana",
+      "scope": "order",
+      "title": "想確認唇釉色號",
+      "message": "如果 23 缺貨可以改 25。",
+      "status": "replied",
+      "createdAt": "2026-05-07T17:56:54.608Z",
+      "replies": []
+    }
+  ],
+  "ruleVersions": [
+    {
+      "id": "rules-2026-05-01",
+      "version": "2026.05.01",
+      "title": "SeoulPick 代購登記與購買規則",
+      "publishedAt": "2026-05-01T10:00:00+08:00",
+      "content": [
+        "代購商品可能因韓國現場庫存、價格、活動組合而異動。",
+        "送出登記不代表一定購買成功，實際以賣家回報狀態為準。",
+        "已完成購買後，除重大瑕疵或賣家公告條件外，不接受任意取消。",
+        "買家需於通知期限內完成付款與取貨。"
+      ]
+    },
+    {
+      "id": "rules-2026-05-08",
+      "version": "2026.05.08",
+      "title": "SeoulPick 代購登記與購買規則",
+      "publishedAt": "2026-05-08T09:00:00+08:00",
+      "content": [
+        "代購商品可能因韓國現場庫存、價格、活動組合而異動。",
+        "送出登記不代表一定購買成功，實際以賣家回報狀態為準。",
+        "商品若為限量或快閃活動，賣家可依付款與登記順序調整購買優先順位。",
+        "已完成購買後，除重大瑕疵或賣家公告條件外，不接受任意取消。",
+        "買家需於通知期限內完成付款與取貨。"
+      ]
+    }
+  ],
+  "ruleAcceptances": [
+    {
+      "userId": "u-nana",
+      "ruleVersionId": "rules-2026-05-08",
+      "acceptedAt": "2026-05-07T23:56:54.608Z"
+    },
+    {
+      "userId": "u-kai",
+      "ruleVersionId": "rules-2026-05-08",
+      "acceptedAt": "2026-05-08T00:56:54.608Z"
+    },
+    {
+      "userId": "u-mei",
+      "ruleVersionId": "rules-2026-05-08",
+      "acceptedAt": "2026-05-08T01:57:31.661Z"
+    }
+  ]
+}
